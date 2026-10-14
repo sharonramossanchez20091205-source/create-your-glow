@@ -3,150 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Glow | Tu talento te hace brillar, tu estrategia hace que te vean</title>
-    <!-- Google Fonts para Montserrat y opciones de tipografía elegante -->
+    <title>Create Your Glow | Estrategia Digital para Artistas del Maquillaje</title>
+    <!-- Google Fonts: Playfair Display & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- HEADER / NAVEGACIÓN -->
-    <header class="header">
+    <!-- 1. HEADER / NAVEGACIÓN -->
+    <header class="header" id="inicio">
         <div class="container header-container">
-            <a href="#" class="logo">CREATE YOUR <span>GLOW</span>✨</a>
-            <nav class="nav">
-                <a href="#beneficios">Beneficios</a>
-                <a href="#cursos">Cursos</a>
-                <a href="#contacto" class="btn-nav">Únete al Glow</a>
+            <a href="#inicio" class="logo">Create Your <span>Glow</span> ✨</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="navMenu">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#para-quien">Para quién es</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#precios">Precios</a>
+                <a href="#contacto" class="btn-nav">Inscribirme</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- 2. HERO SECTION -->
     <section class="hero">
-        <div class="container hero-container">
+        <div class="container hero-grid">
             <div class="hero-content">
-                <span class="badge">💄 Exclusivo para Artistas del Maquillaje</span>
+                <div class="badge-glow">
+                    <span>🔥 OFERTA DE LANZAMIENTO - \$59.900 COP</span>
+                </div>
                 <h1>Tu talento te hace brillar.<br><span class="highlight">Tu estrategia hace que te vean.</span></h1>
-                <p>Domina las redes sociales, atrae clientes que valoren tu arte y haz que tu agenda de maquillaje esté siempre llena con nuestras estrategias digitales probadas.</p>
-                <div class="hero-actions">
-                    <a href="#cursos" class="btn btn-primary">Ver Cursos Destacados 🚀</a>
-                    <a href="#contacto" class="btn btn-secondary">Quiero Asesoría Gratis</a>
+                <p>Domina el mundo digital, atrae clientas de alto valor y llena tu agenda de maquillaje con un método profesional y diseñado exclusivamente para ti.</p>
+                <div class="hero-buttons">
+                    <a href="#precios" class="btn btn-glow">Quiero mi Acceso Ahora ✨</a>
+                    <a href="#servicios" class="btn btn-outline">Ver Temario</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="course-card-mockup">
+                    <div class="card-tag">Masterclass Exclusiva</div>
+                    <h3>Estrategia Digital para Makeup Artists</h3>
+                    <p>El sistema definitivo para pasar de invisibles en redes a referentes en tu ciudad.</p>
+                    <div class="price-box">
+                        <span class="old-price">\$89.900 COP</span>
+                        <span class="current-price">\$59.900 COP</span>
+                    </div>
+                    <ul class="mockup-features">
+                        <li>✔️ Acceso inmediato 24/7</li>
+                        <li>✔️ Plantillas editables en Canva</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE BENEFICIOS -->
-    <section id="beneficios" class="benefits">
+    <!-- 3. SECCIÓN SOBRE NOSOTROS / OBJETIVO -->
+    <section id="nosotros" class="about">
+        <div class="container about-container">
+            <div class="section-header">
+                <span class="sub-heading">NUESTRA MISIÓN</span>
+                <h2>Elevamos tu arte al siguiente nivel digital</h2>
+            </div>
+            <p class="about-text">
+                En <strong>Create Your Glow</strong> sabemos que eres una artista apasionada con una técnica impecable. Sin embargo, el mercado actual exige más que buenas brochas: exige visibilidad, posicionamiento y estrategia. Nacimos para acortar tu curva de aprendizaje y transformar tus redes sociales en una máquina constante de reservas y ventas.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN ¿PARA QUIÉN ES? -->
+    <section id="para-quien" class="for-who">
         <div class="container">
-            <div class="section-title">
-                <h2>¿Por qué necesitas estrategia digital?</h2>
-                <p>El talento con las brochas es solo el 50%. El otro 50% es saber comunicarlo y venderlo.</p>
+            <div class="section-header">
+                <span class="sub-heading">¿ES PARA TI?</span>
+                <h2>Diseñado para maquilladoras con visión de éxito</h2>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Clientes Constantes</h3>
-                    <p>Deja de depender de la suerte o el voz a voz. Aprende a atraer clientes ideales a golpe de contenido estratégico.</p>
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="card-icon">💄</div>
+                    <h3>Para quienes están comenzando su marca</h3>
+                    <p>Si acabas de certificarute o llevas poco tiempo y no sabes cómo conseguir tus primeras clientas sin depender únicamente de familiares o conocidos.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💎</div>
-                    <h3>Posicionamiento Premium</h3>
-                    <p>Haz que tus seguidores dejen de regatear tus precios y entiendan el verdadero valor de tu trabajo profesional.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔥</div>
-                    <h3>Contenido que Conecta</h3>
-                    <p>Crea reels y publicaciones que hipnoticen a tu audiencia y se conviertan en reservas seguras de citas o compras.</p>
+                <div class="info-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Para quienes sienten su crecimiento estancado</h3>
+                    <p>Si publicas constantemente pero los "likes" no se convierten en dinero en tu cuenta bancaria ni en citas agendadas en tu estudio.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE CURSOS DESTACADOS -->
-    <section id="cursos" class="courses">
+    <!-- 5. SECCIÓN SERVICIOS / TEMARIO -->
+    <section id="servicios" class="services">
         <div class="container">
-            <div class="section-title">
-                <h2>Nuestros Cursos Destacados</h2>
-                <p>Elige el impulso exacto que tu marca de maquillaje necesita hoy mismo.</p>
+            <div class="section-header">
+                <span class="sub-heading">TEMARIO ESTELAR</span>
+                <h2>Lo que aprenderás paso a paso</h2>
             </div>
-            <div class="courses-grid">
-                <!-- Curso 1 -->
-                <div class="course-card">
-                    <div class="course-tag">Esencial</div>
-                    <h3>Marca personal para artistas</h3>
-                    <p class="course-desc">Construye una identidad única, magnética y profesional que enamore a primera vista en Instagram y TikTok.</p>
-                    <div class="course-price">$50.000 <span class="currency">COP</span></div>
-                    <a href="#contacto" class="btn btn-primary btn-block">Inscribirme Ahora</a>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Creación de Contenido</h3>
+                    <p>Aprende a grabar y editar reels impecables que hipnoticen visualmente a tu audiencia y muestren la perfección de tus maquillajes.</p>
                 </div>
-                <!-- Curso 2 -->
-                <div class="course-card popular">
-                    <div class="course-tag favorite">Más Popular ⭐</div>
-                    <h3>Contenido que vende</h3>
-                    <p class="course-desc">Aprende la fórmula exacta para crear videos y fotos virales que pasen de "likes" a cotizaciones y ventas reales.</p>
-                    <div class="course-price">$70.000 <span class="currency">COP</span></div>
-                    <a href="#contacto" class="btn btn-primary btn-block">Inscribirme Ahora</a>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>Redes Sociales</h3>
+                    <p>Estrategia de posicionamiento en Instagram y TikTok, uso inteligente de hashtags, tendencias y optimización de biografía para conversión.</p>
                 </div>
-                <!-- Curso 3 -->
-                <div class="course-card">
-                    <div class="course-tag">Avanzado</div>
-                    <h3>Marketing para maquillistas</h3>
-                    <p class="course-desc">El ecosistema digital completo: embudos de venta, pauta publicitaria básica y automatización de citas.</p>
-                    <div class="course-price">$60.000 <span class="currency">COP</span></div>
-                    <a href="#contacto" class="btn btn-primary btn-block">Inscribirme Ahora</a>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>Captación de Clientes</h3>
+                    <p>Embudos sencillos y efectivos para que pasen de un mensaje directo casual a una reserva confirmada y pagada en tu agenda.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE CAPTURA DE LEADS (CRM / GOOGLE APPS SCRIPT) -->
-    <section id="contacto" class="lead-section">
-        <div class="container lead-container">
-            <div class="lead-text">
-                <h2>¡Únete a la comunidad de maquilladoras imparables!</h2>
-                <p>Déjanos tus datos y recibe gratis nuestra guía express: <em>"Los 3 errores que cometen las maquilladoras al subir contenido (y cómo solucionarlos)"</em>.</p>
-                <ul class="lead-perks">
-                    <li>✨ Acceso a preventas y descuentos exclusivos.</li>
-                    <li>✨ Tips semanales directo a tu correo.</li>
+    <!-- 6. SECCIÓN PLAN PROFESIONAL Y PRECIO (CON ACORDEÓN INTERACTIVO) -->
+    <section id="precios" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading">INVERSIÓN ÚNICA</span>
+                <h2>El Plan Profesional Create Your Glow</h2>
+            </div>
+            <div class="pricing-card-featured">
+                <div class="badge-popular">Más Elegido ⭐</div>
+                <h3>Acceso Completo Masterclass + Bonos</h3>
+                <div class="main-price">
+                    <span class="strike">\$89.900 COP</span>
+                    <span class="final-price">\$59.900 <span>COP</span></span>
+                </div>
+                <p class="pricing-desc">Pago único. Sin mensualidades ocultas. Acceso de por vida a todas las actualizaciones futuras.</p>
+                
+                <ul class="pricing-list">
+                    <li>✨ Módulos en video HD paso a paso</li>
+                    <li>✨ Kit de plantillas editables para Instagram</li>
+                    <li>✨ Guía de precios y cotizaciones profesionales</li>
+                    <li>✨ Certificado digital de finalización</li>
                 </ul>
-            </div>
-            <div class="lead-form-wrapper">
-                <form id="leadForm" class="lead-form">
-                    <h3>Empieza a brillar hoy</h3>
-                    <div class="form-group">
-                        <label for="nombre">Tu Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Sofía Martínez" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Tu Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="tucorreo@gmail.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cursoInteres">Curso de mayor interés</label>
-                        <select id="cursoInteres" name="cursoInteres">
-                            <option value="Marca personal">Marca personal para artistas ($50.000 COP)</option>
-                            <option value="Contenido que vende">Contenido que vende ($70.000 COP)</option>
-                            <option value="Marketing para maquillistas">Marketing para maquillistas ($60.000 COP)</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Quiero mi Guía Gratis 🎁</button>
-                    <p class="form-note">🔒 Tus datos están seguros. Cero spam, puro valor.</p>
-                </form>
-            </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 CREATE YOUR GLOW. Todos los derechos reservados.</p>
-            <p>Tu talento te hace brillar. Tu estrategia hace que te vean. ✨</p>
-        </div>
-    </footer>
+                <!-- ACORDEÓN INTERACTIVO -->
+                <div class="accordion">
+                    <button class="accordion-header" id="accordionBtn">
+                        <span>Ver más detalles de los bonos incluidos ▾</span>
+                    </button>
+                    <div class="accordion-content" id="accordionContent">
+                        <p><strong>Bono 1:</strong> Plantillas de historias para agendar citas rápidas (\$30.000 COP valor real - Gratis).</p>
+                        <p><strong>Bono 2:</strong> Masterclass de fotografía de maquillaje con luz natural (\$40.000 COP valor real - Gratis).</p>
+                        <p><strong>Bono 3:</strong> Acceso a comunidad privada de soporte entre artistas.</p>
+                    </div>
+                </div>
 
-    <script src="js/app.js"></script>
-</body>
-</html>
+                <a href="#contacto" class="btn btn-glow btn-block">Inscribirme al
