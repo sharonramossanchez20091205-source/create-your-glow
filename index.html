@@ -22,7 +22,7 @@
     <header class="header" id="inicio">
         <div class="container header-container">
             <a href="#inicio" class="logo">CREATE YOUR <span>GLOW</span></a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -43,7 +43,7 @@
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="badge-launch">
-                    <i class="fa-solid fa-certificate"></i> OFERTA DE LANZAMIENTO — $59.900 COP
+                    <i class="fa-solid fa-certificate"></i> OFERTA DE LANZAMIENTO — \$59.900 COP
                 </div>
                 <h1>Tu talento te hace brillar.<br><span class="highlight">Tu estrategia hace que te vean.</span></h1>
                 <p>Domina las redes sociales, atrae clientas de alto valor y llena tu agenda de maquillaje con un método profesional y diseñado exclusivamente para artistas de la belleza.</p>
@@ -104,7 +104,7 @@
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-title">
-                <span class="section-tag">PILAR DEL PROGRAMA</span>
+                <span class="section-tag">PILARES DEL PROGRAMA</span>
                 <h2>Módulos estratégicos de alta conversión</h2>
             </div>
             <div class="grid-3">
@@ -151,8 +151,8 @@
                     <p class="pricing-intro">Acceso ilimitado al sistema integral de crecimiento digital.</p>
                     
                     <div class="price-display">
-                        <span class="old-p">$89.900 COP</span>
-                        <span class="new-p">$59.900 <small>COP</small></span>
+                        <span class="old-p">\$89.900 COP</span>
+                        <span class="new-p">\$59.900 <small>COP</small></span>
                     </div>
 
                     <ul class="pricing-benefits">
@@ -162,7 +162,7 @@
                         <li><i class="fa-solid fa-check"></i> Certificado digital de finalización</li>
                     </ul>
 
-                    <!-- Acordeón interactivo para explorar el contenido sin recargar -->
+                    <!-- Acordeón interactivo -->
                     <div class="accordion-wrapper">
                         <button class="accordion-trigger" id="accBtn" aria-expanded="false">
                             <span>Explorar temario y bonos incluidos</span>
@@ -212,47 +212,3 @@
                     </div>
                     <div class="input-group">
                         <label for="telefono">Teléfono / WhatsApp</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+57 300..." required>
-                    </div>
-                    <button type="submit" class="btn btn-glow btn-full">Enviar Registro</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">CREATE YOUR GLOW</div>
-            <p class="footer-quote">"Tu talento te hace brillar. Tu estrategia hace que te vean."</p>
-            <p class="footer-location">Santa Marta, Colombia — Instagram: @createyourglow.com</p>
-            <p class="copyright">&copy; 2026 Create Your Glow. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- SCRIPT DE INTERACTIVIDAD (Menú y Acordeón) -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        const accBtn = document.getElementById('accBtn');
-        const accContent = document.getElementById('accContent');
-        const accIcon = document.getElementById('accIcon');
-
-        accBtn.addEventListener('click', () => {
-            accContent.classList.toggle('open');
-            accIcon.classList.toggle('rotate');
-        });
-    </script>
-</body>
-</html>
