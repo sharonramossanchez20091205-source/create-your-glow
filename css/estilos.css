@@ -1,28 +1,30 @@
 /* ==========================================
-   VARIABLES DE DISEÑO Y COLOR (BEAUTY COUTURE)
+   PALETA DE COLORES Y TIPOGRAFÍA FEMENINA
    ========================================== */
 :root {
-    --bg-primary: #FAFAFA;
-    --bg-card: #FFFFFF;
-    --text-dark: #1A1A1A;
+    --bg-main: #FFF5F8;
+    --bg-soft-pink: #FAEDF0;
+    --bg-white: #FFFFFF;
+    
+    --primary-rose: #E86A92;
+    --primary-rose-dark: #d4537b;
+    --accent-gold: #D4AF37;
+    --accent-gold-light: #f7f0d8;
+    
+    --text-dark: #2B2B2B;
     --text-muted: #666666;
-    --rose-gold: #E8B4B8;
-    --rose-gold-light: #f9eded;
-    --accent-gold: #D4A373;
-    --accent-gold-hover: #c49263;
-    --black-luxury: #111111;
-    --white: #FFFFFF;
     
     --font-heading: 'Playfair Display', serif;
-    --font-body: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
     
-    --shadow-soft: 0 15px 35px rgba(232, 180, 184, 0.15);
-    --shadow-hover: 0 20px 40px rgba(212, 163, 115, 0.25);
-    --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    --shadow-pink: 0 10px 30px rgba(232, 106, 146, 0.15);
+    --shadow-hover: 0 15px 35px rgba(232, 106, 146, 0.25);
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* ==========================================
-   RESET Y ESTILOS GLOBALES
+   RESET GENERAL
    ========================================== */
 * {
     margin: 0;
@@ -36,9 +38,9 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: var(--bg-primary);
+    background-color: var(--bg-main);
     color: var(--text-dark);
-    line-height: 1.7;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
@@ -49,65 +51,68 @@ body {
     padding: 0 20px;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     font-family: var(--font-heading);
-    font-weight: 700;
+    color: var(--text-dark);
 }
 
 /* ==========================================
-   BOTONES Y EFECTOS GLOW
+   BOTONES
    ========================================== */
 .btn {
     display: inline-block;
-    padding: 14px 30px;
+    padding: 14px 32px;
     border-radius: 50px;
+    font-family: var(--font-body);
     font-weight: 600;
+    font-size: 0.95rem;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
-    font-size: 0.95rem;
-}
-
-.btn-glow {
-    background: linear-gradient(135deg, var(--rose-gold) 0%, var(--accent-gold) 100%);
-    color: var(--black-luxury);
-    box-shadow: 0 4px 20px rgba(232, 180, 184, 0.5);
     border: none;
 }
 
-.btn-glow:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(212, 163, 115, 0.7);
+.btn-glow {
+    background: linear-gradient(135deg, var(--primary-rose) 0%, #f082a3 100%);
+    color: var(--bg-white);
+    box-shadow: 0 6px 20px rgba(232, 106, 146, 0.4);
 }
 
-.btn-outline {
+.btn-glow:hover {
+    background: linear-gradient(135deg, var(--primary-rose-dark) 0%, var(--primary-rose) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(232, 106, 146, 0.5);
+}
+
+.btn-secondary {
     background-color: transparent;
     color: var(--text-dark);
-    border: 2px solid var(--text-dark);
+    border: 2px solid var(--primary-rose);
 }
 
-.btn-outline:hover {
-    background-color: var(--text-dark);
-    color: var(--white);
-    transform: translateY(-3px);
+.btn-secondary:hover {
+    background-color: var(--primary-rose);
+    color: var(--bg-white);
 }
 
-.btn-block {
+.btn-full {
     display: block;
     width: 100%;
 }
 
 /* ==========================================
-   1. HEADER / NAVEGACIÓN
+   HEADER / GLASSMORPHISM
    ========================================== */
 .header {
-    background-color: var(--white);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.04);
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 18px 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(232, 106, 146, 0.15);
+    padding: 16px 0;
 }
 
 .header-container {
@@ -118,14 +123,14 @@ h1, h2, h3, h4 {
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: var(--black-luxury);
+    color: var(--text-dark);
     text-decoration: none;
 }
 
 .logo span {
-    color: var(--accent-gold);
+    color: var(--primary-rose);
 }
 
 .nav {
@@ -135,9 +140,9 @@ h1, h2, h3, h4 {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--white);
+    background: var(--bg-white);
     padding: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     gap: 15px;
 }
 
@@ -149,38 +154,36 @@ h1, h2, h3, h4 {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
-    font-size: 1rem;
     transition: var(--transition);
 }
 
 .nav a:hover {
-    color: var(--accent-gold);
+    color: var(--primary-rose);
 }
 
 .btn-nav {
-    background-color: var(--rose-gold-light);
-    color: var(--black-luxury) !important;
-    padding: 10px 20px;
+    background-color: var(--bg-soft-pink);
+    color: var(--primary-rose) !important;
+    padding: 8px 20px;
     border-radius: 20px;
     text-align: center;
+    font-weight: 600 !important;
 }
 
 .menu-toggle {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
 .menu-toggle span {
-    display: block;
-    width: 28px;
+    width: 25px;
     height: 3px;
-    background-color: var(--black-luxury);
-    border-radius: 2px;
-    transition: var(--transition);
+    background-color: var(--primary-rose);
+    border-radius: 3px;
 }
 
 @media (min-width: 768px) {
@@ -190,21 +193,20 @@ h1, h2, h3, h4 {
         flex-direction: row;
         position: static;
         width: auto;
+        background: transparent;
         padding: 0;
         box-shadow: none;
         align-items: center;
         gap: 25px;
     }
-    .btn-nav { padding: 8px 20px; }
 }
 
 /* ==========================================
-   2. HERO SECTION
+   HERO SECTION
    ========================================== */
 .hero {
-    padding: 60px 0 90px;
-    background: radial-gradient(circle at top right, rgba(232, 180, 184, 0.2), transparent 50%),
-                radial-gradient(circle at bottom left, rgba(212, 163, 115, 0.15), transparent 50%);
+    padding: 60px 0 80px;
+    background: radial-gradient(circle at top right, rgba(232, 106, 146, 0.12), transparent 60%);
 }
 
 .hero-grid {
@@ -214,508 +216,426 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-.badge-glow {
+.badge-launch {
     display: inline-block;
-    background-color: var(--rose-gold-light);
-    border: 1px solid var(--rose-gold);
+    background-color: var(--bg-soft-pink);
+    color: var(--primary-rose);
     padding: 6px 16px;
     border-radius: 30px;
     font-size: 0.8rem;
     font-weight: 700;
-    color: #b55d65;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    border: 1px solid rgba(232, 106, 146, 0.3);
 }
 
 .hero-content h1 {
-    font-size: 2.3rem;
-    line-height: 1.2;
-    color: var(--black-luxury);
+    font-size: 2.2rem;
+    line-height: 1.25;
     margin-bottom: 20px;
 }
 
 .hero-content h1 .highlight {
-    color: var(--accent-gold);
+    color: var(--primary-rose);
     display: block;
-    margin-top: 5px;
+    font-style: italic;
 }
 
 .hero-content p {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--text-muted);
     margin-bottom: 30px;
 }
 
-.hero-buttons {
+.hero-actions {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.hero-visual {
-    display: flex;
-    justify-content: center;
-}
-
-.course-card-mockup {
-    background-color: var(--bg-card);
+.hero-card {
+    background-color: var(--bg-white);
     border-radius: 24px;
     padding: 35px;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(232, 180, 184, 0.3);
-    width: 100%;
-    max-width: 380px;
-    transition: var(--transition);
+    box-shadow: var(--shadow-pink);
+    border: 1px solid var(--bg-soft-pink);
 }
 
-.course-card-mockup:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
-}
-
-.card-tag {
+.card-badge {
     font-size: 0.75rem;
-    text-transform: uppercase;
     font-weight: 700;
     color: var(--accent-gold);
     letter-spacing: 1px;
-    margin-bottom: 12px;
 }
 
-.course-card-mockup h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: var(--black-luxury);
+.hero-card h3 {
+    font-size: 1.4rem;
+    margin: 8px 0;
 }
 
-.course-card-mockup p {
-    font-size: 0.9rem;
+.card-subtitle {
+    font-size: 0.88rem;
     color: var(--text-muted);
     margin-bottom: 20px;
 }
 
-.price-box {
+.price-tag {
     display: flex;
     align-items: baseline;
-    gap: 15px;
+    gap: 12px;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--bg-soft-pink);
 }
 
-.old-price {
+.price-before {
     text-decoration: line-through;
-    color: #999;
-    font-size: 0.95rem;
+    color: #a0a0a0;
+    font-size: 0.9rem;
 }
 
-.current-price {
+.price-now {
     font-family: var(--font-heading);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: var(--black-luxury);
+    color: var(--primary-rose);
 }
 
-.mockup-features {
-    list-style: none;
+.price-now small {
     font-size: 0.85rem;
-    color: var(--text-dark);
+    font-family: var(--font-body);
 }
 
-.mockup-features li {
+.card-features {
+    list-style: none;
+    font-size: 0.88rem;
+}
+
+.card-features li {
     margin-bottom: 8px;
 }
 
 @media (min-width: 768px) {
-    .hero { padding: 90px 0 120px; }
+    .hero { padding: 90px 0 110px; }
     .hero-grid { grid-template-columns: 1.2fr 0.8fr; }
     .hero-content h1 { font-size: 3.2rem; }
-    .hero-buttons { flex-direction: row; }
+    .hero-actions { flex-direction: row; }
 }
 
 /* ==========================================
-   3. SECCIÓN SOBRE NOSOTROS
+   SECCIONES Y COMPONENTES REUTILIZABLES
    ========================================== */
-.about {
-    padding: 80px 0;
-    background-color: var(--white);
-    text-align: center;
-}
-
-.section-header {
-    margin-bottom: 40px;
-}
-
-.sub-heading {
+.section-tag {
     display: block;
     font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--accent-gold);
     font-weight: 700;
-    margin-bottom: 10px;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
-.section-header h2 {
-    font-size: 2.2rem;
-    color: var(--black-luxury);
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.about-text {
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: var(--text-muted);
+.section-title h2 {
+    font-size: 2.1rem;
 }
 
-/* ==========================================
-   4. SECCIÓN ¿PARA QUIÉN ES?
-   ========================================== */
-.for-who {
-    padding: 80px 0;
-    background-color: var(--bg-primary);
-}
-
-.cards-grid {
+.grid-2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
 }
 
-.info-card {
-    background-color: var(--bg-card);
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    border: 1px solid #f0f0f0;
-    transition: var(--transition);
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
 
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-soft);
-    border-color: var(--rose-gold);
+@media (min-width: 768px) {
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
-.card-icon {
-    font-size: 2.5rem;
+/* ==========================================
+   SOBRE NOSOTROS
+   ========================================== */
+.about {
+    padding: 80px 0;
+    background-color: var(--bg-white);
+    text-align: center;
+}
+
+.about-content {
+    max-width: 780px;
+}
+
+.about-content h2 {
+    font-size: 2.2rem;
     margin-bottom: 20px;
 }
 
-.info-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 15px;
-    color: var(--black-luxury);
+.about-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
 }
 
-.info-card p {
+/* ==========================================
+   ¿PARA QUIÉN ES?
+   ========================================== */
+.for-who {
+    padding: 80px 0;
+}
+
+.pink-card {
+    background-color: var(--bg-soft-pink);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(232, 106, 146, 0.2);
+    transition: var(--transition);
+}
+
+.pink-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-pink);
+    background-color: var(--bg-white);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.pink-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.pink-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
 }
 
-@media (min-width: 768px) {
-    .cards-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 /* ==========================================
-   5. SECCIÓN SERVICIOS / TEMARIO
+   SERVICIOS
    ========================================== */
 .services {
-    padding: 90px 0;
-    background-color: var(--white);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+    padding: 80px 0;
+    background-color: var(--bg-white);
 }
 
 .service-card {
-    background-color: var(--bg-primary);
-    padding: 40px 30px;
+    background-color: var(--bg-main);
+    padding: 35px 25px;
     border-radius: 20px;
-    position: relative;
+    border: 1px solid var(--bg-soft-pink);
     transition: var(--transition);
-    border: 1px solid rgba(212, 163, 115, 0.15);
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    background-color: var(--white);
-    box-shadow: var(--shadow-soft);
-    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-pink);
+    background-color: var(--bg-white);
 }
 
-.service-number {
-    font-family: var(--font-heading);
+.service-icon {
     font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent-gold);
-    opacity: 0.6;
     margin-bottom: 15px;
 }
 
 .service-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    color: var(--black-luxury);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 
 .service-card p {
     color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-@media (min-width: 768px) {
-    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    font-size: 0.92rem;
 }
 
 /* ==========================================
-   6. SECCIÓN PLAN PROFESIONAL Y PRECIO
+   PLAN PROFESIONAL Y PRECIO
    ========================================== */
 .pricing {
-    padding: 90px 0;
-    background: radial-gradient(circle, rgba(232, 180, 184, 0.1) 0%, transparent 70%);
+    padding: 80px 0;
 }
 
-.pricing-card-featured {
-    background-color: var(--bg-card);
-    max-width: 650px;
+.pricing-wrapper {
+    max-width: 600px;
     margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: var(--bg-white);
+    padding: 45px 35px;
     border-radius: 28px;
-    padding: 40px;
-    box-shadow: var(--shadow-soft);
-    border: 2px solid var(--rose-gold);
+    box-shadow: var(--shadow-pink);
+    border: 2px solid var(--primary-rose);
+    text-align: center;
     position: relative;
 }
 
-.badge-popular {
+.pop-badge {
     position: absolute;
-    top: -15px;
-    right: 30px;
-    background-color: var(--black-luxury);
-    color: var(--rose-gold);
-    padding: 6px 16px;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-rose);
+    color: var(--bg-white);
+    padding: 4px 18px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.pricing-card-featured h3 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    color: var(--black-luxury);
+.pricing-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
-.main-price {
-    display: flex;
-    align-items: baseline;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.strike {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 1.1rem;
-}
-
-.final-price {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--black-luxury);
-}
-
-.final-price span {
-    font-size: 1rem;
-    font-family: var(--font-body);
-    color: var(--text-muted);
-}
-
-.pricing-desc {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 25px;
-}
-
-.pricing-list {
-    list-style: none;
-    margin-bottom: 25px;
-}
-
-.pricing-list li {
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-    color: var(--text-dark);
-}
-
-/* Acordeón de detalles */
-.accordion {
-    margin-bottom: 30px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
-}
-
-.accordion-header {
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--accent-gold);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
+.pricing-intro {
     font-size: 0.9rem;
     color: var(--text-muted);
+    margin-bottom: 25px;
 }
 
-.accordion-content.open {
-    max-height: 200px;
-    margin-top: 12px;
+.price-display {
+    margin-bottom: 25px;
 }
 
-.accordion-content p {
-    margin-bottom: 8px;
+.old-p {
+    display: block;
+    text-decoration: line-through;
+    color: #a0a0a0;
+    font-size: 1rem;
+}
+
+.new-p {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--primary-rose);
+}
+
+.new-p small {
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+.pricing-benefits {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.pricing-benefits li {
+    margin-bottom: 12px;
 }
 
 /* ==========================================
-   7. SECCIÓN CONTACTO Y CRM
+   CONTACTO Y CRM
    ========================================== */
 .contact {
-    padding: 90px 0;
-    background-color: var(--white);
+    padding: 80px 0;
+    background-color: var(--bg-white);
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
+.align-center {
     align-items: center;
 }
 
 .contact-info h2 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     margin-bottom: 15px;
-    color: var(--black-luxury);
 }
 
 .contact-info p {
     color: var(--text-muted);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-.contact-details p {
-    margin-bottom: 12px;
+.info-list p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
     color: var(--text-dark);
 }
 
-.contact-details a {
-    color: var(--accent-gold);
+.info-list a {
+    color: var(--primary-rose);
     text-decoration: none;
     font-weight: 600;
 }
 
-.crm-form {
-    background-color: var(--bg-primary);
-    padding: 40px;
+.form-card {
+    background-color: var(--bg-main);
+    padding: 35px;
     border-radius: 24px;
-    border: 1px solid rgba(232, 180, 184, 0.3);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    border: 1px solid var(--bg-soft-pink);
 }
 
-.crm-form h3 {
-    font-size: 1.4rem;
+.form-card h3 {
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    color: var(--black-luxury);
+    text-align: center;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.input-group {
+    margin-bottom: 18px;
 }
 
-.form-group label {
+.input-group label {
     display: block;
     font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--text-dark);
+    margin-bottom: 6px;
 }
 
-.form-group input {
+.input-group input {
     width: 100%;
-    padding: 14px 18px;
-    border: 1px solid #ddd;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
     border-radius: 12px;
     font-family: var(--font-body);
     font-size: 0.95rem;
-    background-color: var(--white);
     outline: none;
     transition: var(--transition);
 }
 
-.form-group input:focus {
-    border-color: var(--accent-gold);
-    box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
-}
-
-@media (min-width: 768px) {
-    .contact-grid { grid-template-columns: 1fr 1fr; }
+.input-group input:focus {
+    border-color: var(--primary-rose);
+    box-shadow: 0 0 0 3px rgba(232, 106, 146, 0.15);
 }
 
 /* ==========================================
-   8. FOOTER
+   FOOTER
    ========================================== */
 .footer {
-    background-color: var(--black-luxury);
-    color: #aaaaaa;
-    padding: 50px 0;
+    background-color: #1a1a1a;
+    color: #cccccc;
+    padding: 40px 0;
     text-align: center;
+    font-size: 0.9rem;
 }
 
-.footer-brand {
+.footer-logo {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
-    color: var(--white);
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--bg-white);
+    margin-bottom: 8px;
 }
 
-.footer-tagline {
+.footer-quote {
+    color: var(--primary-rose);
     font-style: italic;
-    color: var(--rose-gold);
-    margin-bottom: 20px;
-    font-size: 0.95rem;
+    margin-bottom: 15px;
 }
 
-.social-links {
-    margin-bottom: 25px;
-}
-
-.social-links a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    color: var(--accent-gold);
+.footer-location {
+    margin-bottom: 15px;
+    font-size: 0.85rem;
 }
 
 .copyright {
