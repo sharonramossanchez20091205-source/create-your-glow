@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Glow | Estrategia Digital para Artistas del Maquillaje</title>
+    <title>Create Your Glow | Estrategia Digital para Maquilladores</title>
+    
     <!-- Google Fonts: Playfair Display & Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Vector Icons (Cero Emojis) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="css/estilos.css">
@@ -17,7 +21,7 @@
     <!-- HEADER / GLASSMORPHISM -->
     <header class="header" id="inicio">
         <div class="container header-container">
-            <a href="#inicio" class="logo">Create Your <span>Glow</span> ✨</a>
+            <a href="#inicio" class="logo">CREATE YOUR <span>GLOW</span></a>
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
@@ -28,7 +32,6 @@
                 <a href="#nosotros">Nosotros</a>
                 <a href="#para-quien">Para quién es</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#recursos">Recursos PDF</a>
                 <a href="#precios">Precios</a>
                 <a href="#contacto" class="btn-nav">Inscribirme</a>
             </nav>
@@ -40,140 +43,153 @@
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="badge-launch">
-                    💖 ¡OFERTA DE LANZAMIENTO! - $59.900 COP
+                    <i class="fa-solid fa-sparkles"></i> OFERTA DE LANZAMIENTO — \$59.900 COP
                 </div>
                 <h1>Tu talento te hace brillar.<br><span class="highlight">Tu estrategia hace que te vean.</span></h1>
-                <p>Posiciona tu marca de maquillaje, atrae clientas de alto valor en redes sociales y llena tu agenda con estrategias digitales sencillas y probadas.</p>
+                <p>Domina las redes sociales, atrae clientas de alto valor y llena tu agenda con estrategias digitales sencillas y diseñadas exclusivamente para maquilladoras.</p>
                 <div class="hero-actions">
-                    <a href="#contacto" class="btn btn-glow">Quiero Inscribirme Ahora ✨</a>
-                    <a href="docs/temario-completo.pdf" target="_blank" class="btn btn-secondary btn-pdf">📄 Descargar Temario PDF</a>
+                    <a href="#contacto" class="btn btn-glow">Quiero Inscribirme Ahora <i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="#precios" class="btn btn-secondary">Ver Programa</a>
                 </div>
             </div>
             
             <div class="hero-image-wrapper">
                 <div class="hero-frame">
-                    <img src="img/hero.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=800&auto=format&fit=crop';" alt="Create your Glow Makeup Artist" class="hero-img">
+                    <img src="img/hero.jpg" alt="Create your Glow">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE NOSOTROS / OBJETIVO CON IMAGEN INTEGRADA -->
+    <!-- BANNER MODERNO SEPARADOR -->
+    <div class="ticker-banner">
+        <div class="ticker-track">
+            <span>Estrategia Digital <i class="fa-regular fa-star"></i></span>
+            <span>Marca Personal <i class="fa-regular fa-star"></i></span>
+            <span>Captación de Clientas <i class="fa-regular fa-star"></i></span>
+            <span>Contenido que Vende <i class="fa-regular fa-star"></i></span>
+            <span>Estrategia Digital <i class="fa-regular fa-star"></i></span>
+            <span>Marca Personal <i class="fa-regular fa-star"></i></span>
+        </div>
+    </div>
+
+    <!-- SOBRE NOSOTROS -->
     <section id="nosotros" class="about">
         <div class="container grid-2 align-center">
             <div class="about-image-wrapper">
                 <div class="about-frame">
-                    <img src="img/nosotros.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop';" alt="Sobre Create your Glow" class="about-img">
+                    <img src="img/nosotros.jpg" alt="Sobre nosotros">
                 </div>
             </div>
             <div class="about-content">
                 <span class="section-tag">NUESTRA MISIÓN</span>
                 <h2>Impulsamos el talento de maquilladoras como tú</h2>
-                <p>Sabemos cuánto amor y detalle pones en cada look. Pero en el mundo actual, el talento con las brochas necesita ser visto. En <strong>Create Your Glow</strong> te acompañamos paso a paso para que pierdas el miedo a las redes sociales, organices tu estrategia digital y conviertas tu pasión en un negocio rentable, elegante y muy admirado.</p>
+                <p>Sabemos el tiempo y la dedicación que inviertes en perfeccionar cada técnica. Sin embargo, en el mercado actual, el arte necesita estrategia para ser rentable.</p>
+                <p>En <strong>Create Your Glow</strong> te ayudamos a construir una presencia digital sofisticada, estructurar tu oferta y transformar tus redes en una herramienta constante de atracción de clientas ideales.</p>
             </div>
         </div>
     </section>
 
-    <!-- ¿PARA QUIÉN ES? -->
+    <!-- PARA QUIÉN ES -->
     <section id="para-quien" class="for-who">
         <div class="container">
             <div class="section-title">
                 <span class="section-tag">¿ES PARA TI?</span>
-                <h2>Diseñado especialmente para tu etapa actual</h2>
+                <h2>Diseñado para maquilladoras enfocadas en crecer</h2>
             </div>
             <div class="grid-2">
-                <div class="pink-card">
-                    <div class="card-icon">💄</div>
+                <div class="pink-card hover-lift">
+                    <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <h3>Si estás iniciando tu marca</h3>
-                    <p>Ideal si acabas de certificarte o estás abriendo tus redes sociales y deseas empezar con el pie derecho, atrayendo a tus primeras clientas ideales.</p>
+                    <p>Ideal si estás comenzando a posicionarte en redes sociales y deseas construir una imagen profesional desde el primer día para atraer tus primeras clientas.</p>
                 </div>
-                <div class="pink-card">
-                    <div class="card-icon">✨</div>
-                    <h3>Si sientes que tu crecimiento se estancó</h3>
-                    <p>Perfecto si subes fotos y videos constantemente pero no logras convertirlos en cotizaciones reales ni en mensajes a tu WhatsApp.</p>
+                <div class="pink-card hover-lift">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Si sientes tu crecimiento estancado</h3>
+                    <p>Perfecto si creas contenido frecuentemente pero no logras convertir tus vistas o interacciones en cotizaciones formales y reservas directas en tu agenda.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS / CURSOS CON TARJETAS DE IMAGEN ADAPTABLES -->
+    <!-- SERVICIOS -->
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-title">
                 <span class="section-tag">LO QUE APRENDERÁS</span>
-                <h2>Módulos creados para hacerte brillar</h2>
+                <h2>Módulos estratégicos del programa</h2>
             </div>
             <div class="grid-3">
-                <div class="service-card">
+                <div class="service-card hover-lift">
                     <div class="service-img-wrapper">
-                        <img src="img/servicio1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600&auto=format&fit=crop';" alt="Creación de Contenido para Maquillaje" class="service-img">
+                        <img src="img/servicio1.jpg" alt="Creación de contenido">
                     </div>
                     <div class="service-body">
                         <h3>Creación de Contenido</h3>
-                        <p>Técnicas sencillas para grabar y editar videos atrayentes de tus maquillajes con luz natural o de aro, usando solo tu celular.</p>
+                        <p>Técnicas de grabación y edición de videos para mostrar la calidad real de tus maquillajes con luz natural o artificial usando solo tu celular.</p>
                     </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card hover-lift">
                     <div class="service-img-wrapper">
-                        <img src="img/servicio2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=600&auto=format&fit=crop';" alt="Redes Sociales e Instagram" class="service-img">
+                        <img src="img/servicio2.jpg" alt="Redes Sociales">
                     </div>
                     <div class="service-body">
                         <h3>Redes Sociales</h3>
-                        <p>Aprende a optimizar tu perfil de Instagram y TikTok para proyectar una imagen profesional, elegante y de alta gama.</p>
+                        <p>Estructuración de perfil en Instagram y TikTok para transmitir autoridad, elegancia y un posicionamiento de alta gama.</p>
                     </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card hover-lift">
                     <div class="service-img-wrapper">
-                        <img src="img/servicio3.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop';" alt="Captación de Clientas" class="service-img">
+                        <img src="img/servicio3.jpg" alt="Captación de clientes">
                     </div>
                     <div class="service-body">
                         <h3>Captación de Clientas</h3>
-                        <p>Estrategias de comunicación para responder mensajes, enviar cotizaciones de impacto y cerrar reservas de citas al instante.</p>
+                        <p>Flujos de comunicación eficaces para cotizar por mensaje o WhatsApp y concretar cierres de reserva con cobro por anticipado.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN RECURSOS Y GUÍAS PDF -->
-    <section id="recursos" class="pdf-resources">
-        <div class="container">
-            <div class="pdf-box">
-                <div class="pdf-icon">📂</div>
-                <div class="pdf-info">
-                    <h3>¿Quieres revisar el temario detallado en PDF?</h3>
-                    <p>Descarga la guía informativa oficial con la descripción completa de los módulos, horarios y bonos incluidos.</p>
-                </div>
-                <a href="docs/guia-programa.pdf" target="_blank" class="btn btn-glow">Descargar PDF Informativo 📥</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PLAN PROFESIONAL Y PRECIO -->
+    <!-- PLAN PROFESIONAL Y PRECIO CON ACORDEÓN DESPLEGABLE -->
     <section id="precios" class="pricing">
         <div class="container">
             <div class="pricing-wrapper">
-                <div class="pricing-card">
-                    <span class="pop-badge">OFERTA ESPECIAL ⭐</span>
+                <div class="pricing-card hover-lift">
+                    <span class="pop-badge">OFERTA ESPECIAL</span>
                     <h2>Plan Profesional Completo</h2>
-                    <p class="pricing-intro">Todo lo que necesitas para transformar tus redes y tu agenda en un solo lugar.</p>
+                    <p class="pricing-intro">Acceso ilimitado a todo el sistema paso a paso.</p>
                     
                     <div class="price-display">
-                        <span class="old-p">$89.900 COP</span>
-                        <span class="new-p">$59.900 <small>COP</small></span>
+                        <span class="old-p">\$89.900 COP</span>
+                        <span class="new-p">\$59.900 <small>COP</small></span>
                     </div>
 
                     <ul class="pricing-benefits">
-                        <li>✔️ Acceso ilimitado y de por vida</li>
-                        <li>✔️ Módulos prácticos en video paso a paso</li>
-                        <li>✔️ Kit de plantillas editables (Canva & PDF)</li>
-                        <li>✔️ Guía descargable en PDF de atención a clientas</li>
-                        <li>✔️ Certificado digital al finalizar</li>
+                        <li><i class="fa-solid fa-check"></i> Acceso ilimitado y de por vida</li>
+                        <li><i class="fa-solid fa-check"></i> Lecciones prácticas paso a paso en video</li>
+                        <li><i class="fa-solid fa-check"></i> Kit de plantillas de diseño editables</li>
+                        <li><i class="fa-solid fa-check"></i> Certificado digital de participación</li>
                     </ul>
 
-                    <a href="#contacto" class="btn btn-glow btn-full">Aprovechar Descuento Hoy 💕</a>
+                    <!-- ACORDEÓN INTERACTIVO -->
+                    <div class="accordion-wrapper">
+                        <button class="accordion-trigger" id="accBtn">
+                            <span>Ver contenido detallado de los módulos</span>
+                            <i class="fa-solid fa-chevron-down" id="accIcon"></i>
+                        </button>
+                        <div class="accordion-content" id="accContent">
+                            <div class="acc-inner">
+                                <p><strong>Módulo 1:</strong> Configuración de perfil elegante y propuesta de valor.</p>
+                                <p><strong>Módulo 2:</strong> Edición ágil de reels de impacto visual.</p>
+                                <p><strong>Módulo 3:</strong> Scripts de conversión para WhatsApp y atención al cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="btn btn-glow btn-full">Inscribirme al Precio Especial</a>
                 </div>
             </div>
         </div>
@@ -183,62 +199,6 @@
     <section id="contacto" class="contact">
         <div class="container grid-2 align-center">
             <div class="contact-info">
-                <span class="section-tag">¿LISTA PARA BRILLAR?</span>
-                <h2>Déjanos tus datos para asegurar tu cupo</h2>
-                <p>Completa el formulario y te contactaremos de inmediato con la información detallada para que comiences hoy mismo.</p>
-                
-                <div class="info-list">
-                    <p>📍 <strong>Ubicación:</strong> Santa Marta, Colombia</p>
-                    <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/573000000000" target="_blank">+57 300 000 0000</a></p>
-                    <p>✉️ <strong>Instagram:</strong> @createyourglow.com</p>
-                </div>
-            </div>
-
-            <div class="form-card">
-                <form id="crmForm">
-                    <h3>Inscríbete o solicita información</h3>
-                    <div class="input-group">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej. María Paula" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="telefono">Teléfono / WhatsApp</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+57 300..." required>
-                    </div>
-                    <button type="submit" class="btn btn-glow btn-full">Quiero Unirme a Create Your Glow ✨</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">Create Your Glow ✨</div>
-            <p class="footer-quote">"Tu talento te hace brillar. Tu estrategia hace que te vean."</p>
-            <p class="footer-location">Santa Marta, Colombia | Instagram: @createyourglow.com</p>
-            <p class="copyright">&copy; 2026 Create Your Glow. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- SCRIPT DE NAVEGACIÓN MOBILE -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-    </script>
-</body>
-</html>
+                <span class="section-tag">¿LISTA PARA EMPEZAR?</span>
+                <h2>Asegura tu cupo con la oferta de lanzamiento</h2>
+                <p>Ing
