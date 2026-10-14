@@ -269,7 +269,73 @@
             accContent.classList.toggle('open');
             accIcon.classList.toggle('rotate');
         });
-    </script>
-<script type="module" src="js/firebase-config.js"></script>
-</body
-</html>
+<!-- INTERACTIVIDAD Y CONEXIÓN A FIREBASE -->
+    <script type="module">
+        // 1. Importar Firebase y Firestore desde CDN
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        // 2. Credenciales del proyecto
+        const firebaseConfig = {
+            apiKey: "AIzaSyDuerHqN63gWPae3eH_sTSjXYt0aafCYI0",
+            authDomain: "create-your-flow.firebaseapp.com",
+            projectId: "create-your-flow",
+            storageBucket: "create-your-flow.firebasestorage.app",
+            messagingSenderId: "775532885175",
+            appId: "1:775532885175:web:195fe7bd3758c53011c932"
+        };
+
+        // 3. Inicializar Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 4. Funcionalidades de la página (Menú, Acordeón y Formulario)
+        document.addEventListener("DOMContentLoaded", () => {
+            // Menú hamburguesa
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+                document.querySelectorAll('.nav a').forEach(link => {
+                    link.addEventListener('click', () => navMenu.classList.remove('active'));
+                });
+            }
+
+            // Acordeón desplegable
+            const accBtn = document.getElementById('accBtn');
+            const accContent = document.getElementById('accContent');
+            const accIcon = document.getElementById('accIcon');
+            if (accBtn && accContent && accIcon) {
+                accBtn.addEventListener('click', () => {
+                    accContent.classList.toggle('open');
+                    accIcon.classList.toggle('rotate');
+                });
+            }
+
+            // Envío del formulario de contactos a Firestore
+            const crmForm = document.getElementById("crmForm");
+            if (crmForm) {
+                crmForm.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+
+                    const nombre = document.getElementById("nombre")?.value || "";
+                    const email = document.getElementById("email")?.value || "";
+                    const telefono = document.getElementById("telefono")?.value || "";
+
+                    try {
+                        await addDoc(collection(db, "leads"), {
+                            nombre: nombre,
+                            email: email,
+                            telefono: telefono,
+                            fecha: new Date().toISOString()
+                        });
+
+                        alert("¡Registro exitoso! Tus datos se han enviado correctamente.");
+                        crmForm.reset();
+                    } catch (error) {
+                        console.error("Error al guardar en Firestore:", error);
+                        alert("Hubo un error al guardar los datos. Revisa la conexión.");
+                    }
+                });
+            }
+        });
