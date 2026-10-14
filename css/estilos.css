@@ -1,5 +1,5 @@
 /* ==========================================
-   PALETA MINIMALISTA Y TIPOGRAFÍA LUXURY
+   VARIABLES Y ESTÉTICA DE LUJO (LUXURY BEAUTY)
    ========================================== */
 :root {
     --bg-main: #FFFFFF;
@@ -8,7 +8,7 @@
     
     --primary-rose: #C25975;
     --primary-rose-dark: #a4425d;
-    --accent-gold: #D4AF37;
+    --accent-gold: #D47A94;
     
     --text-dark: #1A1A1A;
     --text-muted: #666666;
@@ -18,13 +18,13 @@
     
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
     --shadow-lift: 0 20px 40px rgba(194, 89, 117, 0.12);
-    --glow-effect: 0 0 25px rgba(194, 89, 117, 0.25);
+    --glow-effect: 0 0 25px rgba(194, 89, 117, 0.22);
     
     --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ==========================================
-   RESET GENERAL
+   RESET GENERAL Y TIPOGRAFÍA
    ========================================== */
 * {
     margin: 0;
@@ -62,7 +62,6 @@ img {
     display: block;
 }
 
-/* Elevación 3D Hover */
 .hover-lift {
     transition: var(--transition);
 }
@@ -73,7 +72,7 @@ img {
 }
 
 /* ==========================================
-   BOTONES CON EFECTO LIQUID GLOW
+   BOTONES CON EFECTO GLOW FLUIDO
    ========================================== */
 .btn {
     display: inline-block;
@@ -97,7 +96,6 @@ img {
     box-shadow: 0 6px 20px rgba(194, 89, 117, 0.3);
 }
 
-/* Efecto de Brillo Fluido (Liquid Glow) */
 .btn-glow::after {
     content: '';
     position: absolute;
@@ -143,7 +141,7 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -316,43 +314,8 @@ img {
     .hero-actions { flex-direction: row; }
 }
 
-/* BANNER DE TEXTO INFINITO */
-.ticker-banner {
-    background-color: var(--bg-soft-pink);
-    overflow: hidden;
-    padding: 14px 0;
-    white-space: nowrap;
-    border-top: 1px solid rgba(194, 89, 117, 0.1);
-    border-bottom: 1px solid rgba(194, 89, 117, 0.1);
-}
-
-.ticker-track {
-    display: inline-block;
-    animation: ticker 25s linear infinite;
-}
-
-.ticker-track span {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--primary-rose);
-    margin-right: 35px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.ticker-track i {
-    margin-left: 10px;
-    font-size: 0.7rem;
-    color: var(--accent-gold);
-}
-
-@keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
 /* ==========================================
-   SECCIONES Y COMPONENTES
+   COMPONENTES Y SECCIONES
    ========================================== */
 .section-tag {
     display: block;
@@ -404,6 +367,7 @@ img {
     border-radius: 28px;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    border: 3px solid var(--bg-soft-pink);
 }
 
 .about-content h2 {
@@ -429,7 +393,7 @@ img {
     background-color: var(--bg-card);
     padding: 40px 30px;
     border-radius: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(194, 89, 117, 0.15);
 }
 
 .card-icon {
@@ -472,6 +436,11 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-img-wrapper img {
+    transform: scale(1.05);
 }
 
 .service-body {
@@ -505,7 +474,7 @@ img {
     background-color: var(--bg-card);
     padding: 45px 35px;
     border-radius: 28px;
-    border: 1px solid rgba(194, 89, 117, 0.2);
+    border: 1px solid rgba(194, 89, 117, 0.25);
     text-align: center;
     position: relative;
 }
@@ -570,7 +539,7 @@ img {
     margin-right: 8px;
 }
 
-/* Acordeón */
+/* Acordeón de pestañas */
 .accordion-wrapper {
     border-top: 1px solid rgba(0,0,0,0.06);
     border-bottom: 1px solid rgba(0,0,0,0.06);
@@ -608,7 +577,7 @@ img {
 }
 
 .accordion-content.open {
-    max-height: 200px;
+    max-height: 250px;
     margin-top: 15px;
 }
 
