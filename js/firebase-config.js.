@@ -1,40 +1,21 @@
-// Importar Firebase y Firestore desde los CDNs oficiales
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-
-// Tu configuración de Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyDuerHqN63gWPae3eH_sTSjXYt0aafCYI0",
-  authDomain: "create-your-flow.firebaseapp.com",
-  projectId: "create-your-flow",
-  storageBucket: "create-your-flow.firebasestorage.app",
-  messagingSenderId: "775532885175",
-  appId: "1:775532885175:web:195fe7bd3758c53011c932"
-};
-
-// Inicializar Firebase y Firestore
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-
 // Lógica para capturar los datos del formulario de tu Landing Page
 document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.querySelector("form"); // Asegúrate de que tu formulario principal sea un tag <form>
+  const contactForm = document.getElementById("contactForm") || document.querySelector("form");
   
   if (contactForm) {
     contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       
-      // Capturamos los campos del formulario (ajusta los IDs o names según tu HTML)
-      const nombreInput = contactForm.querySelector('input[name="nombre"]') || contactForm.querySelector('input[type="text"]');
-      const emailInput = contactForm.querySelector('input[type="email"]');
-      const mensajeInput = contactForm.querySelector('textarea');
+      // Capturamos los campos por ID o por tipo asegurando que no fallen
+      const nombreInput = contactForm.querySelector('#nombre') || contactForm.querySelector('input[type="text"]');
+      const emailInput = contactForm.querySelector('#email') || contactForm.querySelector('input[type="email"]');
+      const mensajeInput = contactForm.querySelector('#mensaje') || contactForm.querySelector('textarea');
 
       const nombre = nombreInput ? nombreInput.value : "Sin nombre";
       const email = emailInput ? emailInput.value : "Sin email";
       const mensaje = mensajeInput ? mensajeInput.value : "Sin mensaje";
 
       try {
-        // Guardar en la colección "leads" de tu base de datos Firestore
         await addDoc(collection(db, "leads"), {
           nombre: nombre,
           email: email,
