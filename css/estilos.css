@@ -17,10 +17,11 @@
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
     
-    --shadow-pink: 0 10px 30px rgba(232, 106, 146, 0.15);
-    --shadow-hover: 0 15px 35px rgba(232, 106, 146, 0.25);
+    --shadow-pink: 0 12px 30px rgba(232, 106, 146, 0.18);
+    --shadow-hover: 0 18px 40px rgba(232, 106, 146, 0.28);
+    --glow-effect: 0 0 25px rgba(232, 106, 146, 0.35);
     
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* ==========================================
@@ -54,6 +55,12 @@ body {
 h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--text-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ==========================================
@@ -108,9 +115,9 @@ h1, h2, h3 {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(232, 106, 146, 0.15);
     padding: 16px 0;
 }
@@ -252,66 +259,30 @@ h1, h2, h3 {
     gap: 15px;
 }
 
-.hero-card {
-    background-color: var(--bg-white);
-    border-radius: 24px;
-    padding: 35px;
-    box-shadow: var(--shadow-pink);
-    border: 1px solid var(--bg-soft-pink);
-}
-
-.card-badge {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent-gold);
-    letter-spacing: 1px;
-}
-
-.hero-card h3 {
-    font-size: 1.4rem;
-    margin: 8px 0;
-}
-
-.card-subtitle {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-}
-
-.price-tag {
+.hero-image-wrapper {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--bg-soft-pink);
+    justify-content: center;
 }
 
-.price-before {
-    text-decoration: line-through;
-    color: #a0a0a0;
-    font-size: 0.9rem;
+.hero-frame {
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+    background: linear-gradient(135deg, var(--bg-white), var(--bg-soft-pink));
+    box-shadow: var(--shadow-pink), var(--glow-effect);
+    border: 1px solid rgba(232, 106, 146, 0.25);
+    transition: var(--transition);
 }
 
-.price-now {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-rose);
+.hero-frame:hover {
+    transform: translateY(-5px) scale(1.01);
 }
 
-.price-now small {
-    font-size: 0.85rem;
-    font-family: var(--font-body);
-}
-
-.card-features {
-    list-style: none;
-    font-size: 0.88rem;
-}
-
-.card-features li {
-    margin-bottom: 8px;
+.hero-img {
+    border-radius: 22px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 480px;
 }
 
 @media (min-width: 768px) {
@@ -354,6 +325,10 @@ h1, h2, h3 {
     gap: 30px;
 }
 
+.align-center {
+    align-items: center;
+}
+
 @media (min-width: 768px) {
     .grid-2 { grid-template-columns: repeat(2, 1fr); }
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -365,11 +340,24 @@ h1, h2, h3 {
 .about {
     padding: 80px 0;
     background-color: var(--bg-white);
-    text-align: center;
 }
 
-.about-content {
-    max-width: 780px;
+.about-frame {
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow-pink);
+    border: 3px solid var(--bg-soft-pink);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.about-frame:hover .about-img {
+    transform: scale(1.03);
 }
 
 .about-content h2 {
@@ -392,7 +380,7 @@ h1, h2, h3 {
 .pink-card {
     background-color: var(--bg-soft-pink);
     padding: 40px 30px;
-    border-radius: 20px;
+    border-radius: 24px;
     border: 1px solid rgba(232, 106, 146, 0.2);
     transition: var(--transition);
 }
@@ -419,7 +407,7 @@ h1, h2, h3 {
 }
 
 /* ==========================================
-   SERVICIOS
+   SERVICIOS / TARJETAS ADAPTABLES CON IMAGEN
    ========================================== */
 .services {
     padding: 80px 0;
@@ -428,10 +416,12 @@ h1, h2, h3 {
 
 .service-card {
     background-color: var(--bg-main);
-    padding: 35px 25px;
-    border-radius: 20px;
+    border-radius: 24px;
+    overflow: hidden;
     border: 1px solid var(--bg-soft-pink);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -440,9 +430,26 @@ h1, h2, h3 {
     background-color: var(--bg-white);
 }
 
-.service-icon {
-    font-size: 2rem;
-    margin-bottom: 15px;
+.service-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-img {
+    transform: scale(1.08);
+}
+
+.service-body {
+    padding: 25px;
+    flex-grow: 1;
 }
 
 .service-card h3 {
@@ -453,6 +460,49 @@ h1, h2, h3 {
 .service-card p {
     color: var(--text-muted);
     font-size: 0.92rem;
+}
+
+/* ==========================================
+   SECCIÓN RECURSOS PDF
+   ========================================== */
+.pdf-resources {
+    padding: 40px 0 80px;
+}
+
+.pdf-box {
+    background: linear-gradient(135deg, var(--bg-soft-pink) 0%, var(--bg-white) 100%);
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid rgba(232, 106, 146, 0.3);
+    box-shadow: var(--shadow-pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.pdf-icon {
+    font-size: 2.8rem;
+}
+
+.pdf-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.pdf-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .pdf-box {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        padding: 40px;
+    }
 }
 
 /* ==========================================
@@ -541,10 +591,6 @@ h1, h2, h3 {
 .contact {
     padding: 80px 0;
     background-color: var(--bg-white);
-}
-
-.align-center {
-    align-items: center;
 }
 
 .contact-info h2 {
