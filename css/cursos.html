@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Cursos | Create Your Glow</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Mismo archivo CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header" id="inicio">
+        <div class="container header-container">
+            <a href="index.html" class="logo">CREATE YOUR <span class="text-gradient">GLOW</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="cursos.html" class="active">Catálogo de Cursos</a>
+                <a href="index.html#contacto" class="btn-3d btn-3d-nav">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER DEL CATÁLOGO -->
+    <section class="hero" style="padding: 60px 0 40px;">
+        <div class="container text-center">
+            <span class="badge-3d">
+                <i class="fa-solid fa-graduation-cap"></i> FORMACIÓN ESPECIALIZADA
+            </span>
+            <h1 style="font-size: 2.8rem; margin-top: 15px;">Catálogo de <span class="text-gradient">Programas & Cursos</span></h1>
+            <p style="max-width: 650px; margin: 15px auto 0; color: var(--text-muted);">
+                Aprende paso a paso las mejores estrategias de marketing, creación de contenido y posicionamiento para convertir tu pasión por el maquillaje en un negocio altamente rentable.
+            </p>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO DE CURSOS -->
+    <section class="services" style="padding: 40px 0 90px;">
+        <div class="container">
+            <div class="grid-3">
+
+                <!-- CURSO 1 -->
+                <div class="glass-card-3d service-card hover-lift">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h3>Marca Personal para Artistas</h3>
+                    <p style="margin-bottom: 20px;">
+                        Construye una identidad única, magnética y profesional que enamore a primera vista en Instagram y TikTok.
+                    </p>
+                    <div style="margin-bottom: 20px;">
+                        <span class="text-gradient" style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading);">$50.000 COP</span>
+                    </div>
+                    <a href="index.html#contacto" class="btn-3d btn-3d-primary btn-full">Inscribirme</a>
+                </div>
+
+                <!-- CURSO 2 -->
+                <div class="glass-card-3d service-card hover-lift" style="border: 2px solid var(--rose-bright);">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <span class="pop-badge-3d" style="top: -14px;">MÁS POPULAR</span>
+                    <h3>Contenido que Vende</h3>
+                    <p style="margin-bottom: 20px;">
+                        Aprende la fórmula exacta para crear videos y publicaciones virales que pasen de "likes" a cotizaciones directas.
+                    </p>
+                    <div style="margin-bottom: 20px;">
+                        <span class="text-gradient" style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading);">$70.000 COP</span>
+                    </div>
+                    <a href="index.html#contacto" class="btn-3d btn-3d-primary btn-full">Inscribirme</a>
+                </div>
+
+                <!-- CURSO 3 -->
+                <div class="glass-card-3d service-card hover-lift">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3>Marketing para Maquillistas</h3>
+                    <p style="margin-bottom: 20px;">
+                        El ecosistema digital completo: estrategias de captación de clientes, gestión de WhatsApp y cierre de citas.
+                    </p>
+                    <div style="margin-bottom: 20px;">
+                        <span class="text-gradient" style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading);">$60.000 COP</span>
+                    </div>
+                    <a href="index.html#contacto" class="btn-3d btn-3d-primary btn-full">Inscribirme</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">CREATE YOUR <span class="text-gradient">GLOW</span></div>
+            <p class="footer-quote">"Tu talento te hace brillar. Tu estrategia hace que te vean."</p>
+            <p class="footer-location">Santa Marta, Colombia — Instagram: @createyourglow.com</p>
+            <p class="copyright">&copy; 2026 Create Your Glow. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVIDAD JS -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
