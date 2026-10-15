@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Cursos - Create Your Glow</title>
+    <!-- Importación de tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Header interactivo -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">CREATE YOUR <span class="glow-text">GLOW</span></h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="cursos.html" class="nav-link active">Cursos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        <!-- Título de la sección -->
+        <section class="section-title-area">
+            <h2 class="section-title">Catálogo de Cursos</h2>
+            <p class="section-subtitle">Tu talento te hace brillar. Tu estrategia hace que te vean.</p>
+        </section>
+
+        <!-- Filtros por categoría -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="marca">Marca Personal</button>
+            <button class="filter-btn" data-filter="contenido">Contenido</button>
+            <button class="filter-btn" data-filter="marketing">Marketing</button>
+        </div>
+
+        <!-- Contenedor dinámico de los cursos de Firestore -->
+        <div id="cursos-grid" class="cursos-grid">
+            <!-- Los cursos leídos desde Firebase se inyectarán aquí -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Create Your Glow. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para cargar Firebase y los cursos -->
+    <script type="module" src="js/cursos.js"></script>
+</body>
+</html>
