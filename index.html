@@ -3,339 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Glow | Estrategia Digital para Artistas del Maquillaje</title>
-    
-    <!-- Google Fonts: Playfair Display & Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Vector Icons (Cero Emojis) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Hoja de Estilos -->
+    <title>Catálogo de Cursos | CREATE YOUR GLOW</title>
+    <!-- Fuente Montserrat para legibilidad y elegancia -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- HEADER GLASSMORPHISM -->
-    <header class="header" id="inicio">
-        <div class="container header-container">
-            <a href="#inicio" class="logo">CREATE YOUR <span class="text-gradient">GLOW</span></a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav" id="navMenu">
-                <a href="#inicio">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#para-quien">Para quién es</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#precios">Precios</a>
-                <a href="#contacto" class="btn-3d btn-3d-nav">Inscribirme</a>
+    <!-- Encabezado y Navegación (Conectado con index.html) -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">CREATE YOUR <span>GLOW</span></a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">Inicio</a>
+                <a href="cursos.html" class="active">Cursos</a>
+                <a href="index.html#contacto">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="badge-3d">
-                    <i class="fa-solid fa-bolt-lightning"></i> ¡OFERTA DE LANZAMIENTO! — $59.900 COP <span class="old-price-strike">$89.900</span>
-                </div>
-                <h1>Tu talento te hace <span class="text-gradient">brillar</span>.<br>Tu <span class="text-gradient">estrategia</span> hace que te vean.</h1>
-                <p>Plataforma de aceleración digital exclusiva para maquilladoras profesionales. Domina tus redes, posiciona tu marca y llena tu agenda con clientes de alto valor.</p>
-                <div class="hero-actions">
-                    <a href="#contacto" class="btn-3d btn-3d-primary">¡INSCRIBETE AHORA! <i class="fa-solid fa-arrow-right-long"></i></a>
-                    <a href="#precios" class="btn-3d btn-3d-secondary">Ver Programa</a>
-                </div>
-            </div>
+    <!-- Banner del Catálogo -->
+    <section class="catalog-hero">
+        <span class="subtitle-tag">TU TALENTO TE HACE BRILLAR. TU ESTRATEGIA HACE QUE TE VEAN</span>
+        <h1>Catálogo de Estrategias Digitales</h1>
+        <p>Aprende a posicionar tu marca de maquillaje, atraer clientes ideales y monetizar tu pasión.</p>
+    </section>
+
+    <!-- Cuadrícula de Cursos -->
+    <main class="catalog-container">
+        <div class="courses-grid">
             
-            <div class="hero-graphic-card">
-                <div class="glass-card-3d hover-lift">
-                    <div class="card-top-tag"><i class="fa-solid fa-star"></i> MASTERCLASS EXCLUSIVA</div>
-                    <h3>Estrategia Digital para Makeup Artists</h3>
-                    <div class="graphic-stats">
-                        <div class="stat-item">
-                            <span class="stat-num text-gradient">+500</span>
-                            <span class="stat-txt">Artistas formadas</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num text-gradient">100%</span>
-                            <span class="stat-txt">Caso práctico</span>
-                        </div>
-                    </div>
-                    <div class="graphic-divider"></div>
-                    <p class="card-mini-quote">Pasa de la invisibilidad digital a convertirte en la referente en tu ciudad.</p>
+            <!-- Curso 1 -->
+            <article class="course-card">
+                <div class="card-badge">Más Popular</div>
+                <h3>Marca Personal para Artistas</h3>
+                <p class="short-desc">Define tu voz única, crea un perfil irresistible en redes y destaca sobre la competencia.</p>
+                <div class="card-footer">
+                    <span class="price">$50.000 COP</span>
+                    <button class="btn-primary btn-open-modal" data-course="1">Ver Detalle</button>
                 </div>
-            </div>
-        </div>
-    </section>
+            </article>
 
-    <!-- SOBRE NOSOTROS -->
-    <section id="nosotros" class="about">
-        <div class="container">
-            <div class="glass-card-3d about-card hover-lift">
-                <span class="section-tag">NUESTRO PROPÓSITO</span>
-                <h2>Transformamos tu arte técnico en un negocio <span class="text-gradient">rentable y deseable</span></h2>
-                <p>Sabemos el nivel de detalle y pasión que pones en cada brocha. Sin embargo, en el mercado actual, el arte sin estrategia pasa desapercibido. En <strong>Create Your Glow</strong> te ayudamos a construir una marca magnética que convierta interacciones en citas reservadas.</p>
+            <!-- Curso 2 -->
+            <article class="course-card">
+                <div class="card-badge">Estrategia</div>
+                <h3>Contenido que Vende</h3>
+                <p class="short-desc">Aprende a grabar, editar y estructurar Reels/TikToks de tus maquillajes que conviertan reproducciones en clientes.</p>
+                <div class="card-footer">
+                    <span class="price">$70.000 COP</span>
+                    <button class="btn-primary btn-open-modal" data-course="2">Ver Detalle</button>
+                </div>
+            </article>
+
+            <!-- Curso 3 -->
+            <article class="course-card">
+                <div class="card-badge">Ventas</div>
+                <h3>Marketing para Maquillistas</h3>
+                <p class="short-desc">Estrategias de precios, cierre de ventas por WhatsApp y fidelización de novias y social makeup.</p>
+                <div class="card-footer">
+                    <span class="price">$60.000 COP</span>
+                    <button class="btn-primary btn-open-modal" data-course="3">Ver Detalle</button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Ventana Modal Interactiva (Descripción Detallada) -->
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <span class="modal-tag" id="modalTag">CARRERA DE MAQUILLAJE</span>
+            <h2 id="modalTitle">Título del Curso</h2>
+            <p class="modal-price" id="modalPrice">$0 COP</p>
+            
+            <div class="modal-body">
+                <h3>¿Qué aprenderás en este curso?</h3>
+                <p id="modalDescription">Descripción detallada...</p>
                 
-                <div class="about-grid-features">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
-                        <h4>Posicionamiento Premium</h4>
-                        <p>Atrae clientas que valoran tu trabajo y pagan sin regatear.</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h4>Conversión Constante</h4>
-                        <p>Diseña un flujo de ventas automático desde tus contenidos en redes.</p>
-                    </div>
-                </div>
+                <h4>Incluye:</h4>
+                <ul id="modalIncludes">
+                    <!-- Se llena con JavaScript -->
+                </ul>
+            </div>
+
+            <div class="modal-actions">
+                <a href="#" id="modalBuyBtn" class="btn-glow">Inscribirme Ahora</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- ¿PARA QUIÉN ES? -->
-    <section id="para-quien" class="for-who">
-        <div class="container">
-            <div class="section-title">
-                <span class="section-tag">DIAGNÓSTICO</span>
-                <h2>¿Diseñado para <span class="text-gradient">tu momento actual</span>?</h2>
-            </div>
-            <div class="grid-2">
-                <div class="glass-card-3d hover-lift">
-                    <div class="card-icon-3d"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Si estás iniciando tu marca</h3>
-                    <p>Construye desde el primer día una presencia digital profesional sin perder tiempo en la prueba y error, posicionándote con autoridad instantánea.</p>
-                </div>
-                <div class="glass-card-3d hover-lift">
-                    <div class="card-icon-3d"><i class="fa-solid fa-arrow-trend-up"></i></div>
-                    <h3>Si sientes tu crecimiento estancado</h3>
-                    <p>Convierte el contenido que subes a Reels e Instagram en cotizaciones reales para novias, eventos y sociales de manera predecible.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICIOS / PILARES -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <div class="section-title">
-                <span class="section-tag">TEMARIO ESTRATÉGICO</span>
-                <h2>Pilares del programa <span class="text-gradient">Create Your Glow</span></h2>
-            </div>
-            <div class="grid-3">
-                <div class="glass-card-3d service-card hover-lift">
-                    <div class="service-icon-wrapper">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
-                    <h3>Creación de Contenido</h3>
-                    <p>Técnicas avanzadas de iluminación, encuadre móvil y edición rápida de Reels que muestren la textura y acabado perfecto de tus maquillajes.</p>
-                </div>
-
-                <div class="glass-card-3d service-card hover-lift">
-                    <div class="service-icon-wrapper">
-                        <i class="fa-solid fa-hashtag"></i>
-                    </div>
-                    <h3>Redes Sociales</h3>
-                    <p>Optimización de biografía, feed armónico y estrategias de interacción en Instagram y TikTok para atraer a tu público objetivo.</p>
-                </div>
-
-                <div class="glass-card-3d service-card hover-lift">
-                    <div class="service-icon-wrapper">
-                        <i class="fa-solid fa-comments-dollar"></i>
-                    </div>
-                    <h3>Captación de Clientas</h3>
-                    <p>Scripts de respuesta rápida en WhatsApp e Instagram DM para enviar cotizaciones elegantes y cerrar reservas con anticipo pagado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRECIOS Y PLAN PROFESIONAL -->
-    <section id="precios" class="pricing">
-        <div class="container">
-            <div class="pricing-wrapper">
-                <div class="glass-card-3d pricing-card hover-lift">
-                    <span class="pop-badge-3d"><i class="fa-solid fa-fire"></i> ACCESO COMPLETO</span>
-                    <h2>Plan Profesional Estelar</h2>
-                    <p class="pricing-intro">Todo lo que necesitas para escalar tu negocio de maquillaje.</p>
-                    
-                    <div class="price-display">
-                        <span class="old-p">$89.900 COP</span>
-                        <span class="new-p text-gradient">$59.900 <small>COP</small></span>
-                    </div>
-
-                    <ul class="pricing-benefits">
-                        <li><i class="fa-solid fa-circle-check"></i> Acceso ilimitado y de por vida</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Lecciones prácticas en video HD</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Kit de plantillas editables para Instagram</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado digital de finalización</li>
-                    </ul>
-
-                    <!-- Acordeón interactivo -->
-                    <div class="accordion-wrapper">
-                        <button class="accordion-trigger" id="accBtn" aria-expanded="false">
-                            <span>Ver detalles del contenido incluido</span>
-                            <i class="fa-solid fa-chevron-down" id="accIcon"></i>
-                        </button>
-                        <div class="accordion-content" id="accContent">
-                            <div class="acc-inner">
-                                <p><strong>Módulo 1:</strong> Identidad de Marca y Posicionamiento de Lujo.</p>
-                                <p><strong>Módulo 2:</strong> Grabación y Edición de Maquillaje en Celular.</p>
-                                <p><strong>Módulo 3:</strong> Guiones de Respuesta y Venta de Servicios.</p>
-                                <p><strong>Bono Especial:</strong> Plantillas de cotización directa para novias.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="#contacto" class="btn-3d btn-3d-primary btn-full">¡CONSEGUIR MI ACCESO AHORA!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO CONTACTO Y CRM -->
-    <section id="contacto" class="contact">
-        <div class="container grid-2 align-center">
-            <div class="contact-info">
-                <span class="section-tag">REGISTRO DE ADMISIÓN</span>
-                <h2>Únete hoy a la comunidad de maquilladoras <span class="text-gradient">imparables</span></h2>
-                <p>Ingresa tus datos a continuación y recibe inmediatamente la información para acceder a la plataforma.</p>
-                
-                <div class="info-list">
-                    <p><i class="fa-solid fa-location-dot"></i> <strong>Ubicación:</strong> Santa Marta, Colombia</p>
-                    <p><i class="fa-brands fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/573000000000" target="_blank">+57 300 000 0000</a></p>
-                    <p><i class="fa-brands fa-instagram"></i> <strong>Instagram:</strong> @createyourglow.com</p>
-                </div>
-            </div>
-
-            <div class="glass-card-3d form-card hover-lift">
-                <form id="crmForm">
-                    <h3>Asegura tu cupo de oferta</h3>
-                    <div class="input-group">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="telefono">Teléfono / WhatsApp</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+57 300..." required>
-                    </div>
-                    <button type="submit" class="btn-3d btn-3d-primary btn-full">Completar Registro</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">CREATE YOUR <span class="text-gradient">GLOW</span></div>
-            <p class="footer-quote">"Tu talento te hace brillar. Tu estrategia hace que te vean."</p>
-            <p class="footer-location">Santa Marta, Colombia — Instagram: @createyourglow.com</p>
-            <p class="copyright">&copy; 2026 Create Your Glow. Todos los derechos reservados.</p>
-        </div>
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <p>&copy; 2026 CREATE YOUR GLOW. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- INTERACTIVIDAD JS -->
-    <script>
-        // Menú hamburguesa
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
+    <!-- Script de interacción del catálogo -->
+    <script src="js/cursos.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Cursos | CREATE YOUR GLOW</title>
+    <!-- Fuente Montserrat para legibilidad y elegancia -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+    <!-- Encabezado y Navegación (Conectado con index.html) -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">CREATE YOUR <span>GLOW</span></a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">Inicio</a>
+                <a href="cursos.html" class="active">Cursos</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-        document.querySelectorAll('.nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
+    <!-- Banner del Catálogo -->
+    <section class="catalog-hero">
+        <span class="subtitle-tag">TU TALENTO TE HACE BRILLAR. TU ESTRATEGIA HACE QUE TE VEAN</span>
+        <h1>Catálogo de Estrategias Digitales</h1>
+        <p>Aprende a posicionar tu marca de maquillaje, atraer clientes ideales y monetizar tu pasión.</p>
+    </section>
 
-        // Acordeón desplegable
-        const accBtn = document.getElementById('accBtn');
-        const accContent = document.getElementById('accContent');
-        const accIcon = document.getElementById('accIcon');
+    <!-- Cuadrícula de Cursos -->
+    <main class="catalog-container">
+        <div class="courses-grid">
+            
+            <!-- Curso 1 -->
+            <article class="course-card">
+                <div class="card-badge">Más Popular</div>
+                <h3>Marca Personal para Artistas</h3>
+                <p class="short-desc">Define tu voz única, crea un perfil irresistible en redes y destaca sobre la competencia.</p>
+                <div class="card-footer">
+                    <span class="price">$50.000 COP</span>
+                    <button class="btn-primary btn-open-modal" data-course="1">Ver Detalle</button>
+                </div>
+            </article>
 
-        accBtn.addEventListener('click', () => {
-            accContent.classList.toggle('open');
-            accIcon.classList.toggle('rotate');
-        });
-<!-- INTERACTIVIDAD Y CONEXIÓN A FIREBASE -->
-    <script type="module">
-        // 1. Importar Firebase y Firestore desde CDN
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+            <!-- Curso 2 -->
+            <article class="course-card">
+                <div class="card-badge">Estrategia</div>
+                <h3>Contenido que Vende</h3>
+                <p class="short-desc">Aprende a grabar, editar y estructurar Reels/TikToks de tus maquillajes que conviertan reproducciones en clientes.</p>
+                <div class="card-footer">
+                    <span class="price">$70.000 COP</span>
+                    <button class="btn-primary btn-open-modal" data-course="2">Ver Detalle</button>
+                </div>
+            </article>
 
-        // 2. Credenciales del proyecto
-        const firebaseConfig = {
-            apiKey: "AIzaSyDuerHqN63gWPae3eH_sTSjXYt0aafCYI0",
-            authDomain: "create-your-flow.firebaseapp.com",
-            projectId: "create-your-flow",
-            storageBucket: "create-your-flow.firebasestorage.app",
-            messagingSenderId: "775532885175",
-            appId: "1:775532885175:web:195fe7bd3758c53011c932"
-        };
+            <!-- Curso 3 -->
+            <article class="course-card">
+                <div class="card-badge">Ventas</div>
+                <h3>Marketing para Maquillistas</h3>
+                <p class="short-desc">Estrategias de precios, cierre de ventas por WhatsApp y fidelización de novias y social makeup.</p>
+                <div class="card-footer">
+                    <span class="price">$60.000 COP</span>
+                    <button class="btn-primary btn-open-modal" data-course="3">Ver Detalle</button>
+                </div>
+            </article>
 
-        // 3. Inicializar Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        </div>
+    </main>
 
-        // 4. Funcionalidades de la página (Menú, Acordeón y Formulario)
-        document.addEventListener("DOMContentLoaded", () => {
-            // Menú hamburguesa
-            const menuToggle = document.getElementById('menuToggle');
-            const navMenu = document.getElementById('navMenu');
-            if (menuToggle && navMenu) {
-                menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-                document.querySelectorAll('.nav a').forEach(link => {
-                    link.addEventListener('click', () => navMenu.classList.remove('active'));
-                });
-            }
+    <!-- Ventana Modal Interactiva (Descripción Detallada) -->
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <span class="modal-tag" id="modalTag">CARRERA DE MAQUILLAJE</span>
+            <h2 id="modalTitle">Título del Curso</h2>
+            <p class="modal-price" id="modalPrice">$0 COP</p>
+            
+            <div class="modal-body">
+                <h3>¿Qué aprenderás en este curso?</h3>
+                <p id="modalDescription">Descripción detallada...</p>
+                
+                <h4>Incluye:</h4>
+                <ul id="modalIncludes">
+                    <!-- Se llena con JavaScript -->
+                </ul>
+            </div>
 
-            // Acordeón desplegable
-            const accBtn = document.getElementById('accBtn');
-            const accContent = document.getElementById('accContent');
-            const accIcon = document.getElementById('accIcon');
-            if (accBtn && accContent && accIcon) {
-                accBtn.addEventListener('click', () => {
-                    accContent.classList.toggle('open');
-                    accIcon.classList.toggle('rotate');
-                });
-            }
+            <div class="modal-actions">
+                <a href="#" id="modalBuyBtn" class="btn-glow">Inscribirme Ahora</a>
+            </div>
+        </div>
+    </div>
 
-            // Envío del formulario de contactos a Firestore
-            const crmForm = document.getElementById("crmForm");
-            if (crmForm) {
-                crmForm.addEventListener("submit", async (e) => {
-                    e.preventDefault();
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <p>&copy; 2026 CREATE YOUR GLOW. Todos los derechos reservados.</p>
+    </footer>
 
-                    const nombre = document.getElementById("nombre")?.value || "";
-                    const email = document.getElementById("email")?.value || "";
-                    const telefono = document.getElementById("telefono")?.value || "";
-
-                    try {
-                        await addDoc(collection(db, "leads"), {
-                            nombre: nombre,
-                            email: email,
-                            telefono: telefono,
-                            fecha: new Date().toISOString()
-                        });
-
-                        alert("¡Registro exitoso! Tus datos se han enviado correctamente.");
-                        crmForm.reset();
-                    } catch (error) {
-                        console.error("Error al guardar en Firestore:", error);
-                        alert("Hubo un error al guardar los datos. Revisa la conexión.");
-                    }
-                });
-            }
-        });
+    <!-- Script de interacción del catálogo -->
+    <script src="js/cursos.js"></script>
+</body>
+</html>v
