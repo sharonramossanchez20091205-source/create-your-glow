@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | Create Your Glow</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="login-page-body" style="background-color: #1A1A1A; display: flex; align-items: center; justify-content: min-height: 100vh; margin: 0; padding: 20px;">
+
+    <div class="container" style="max-width: 450px; width: 100%;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="index.html" class="logo" style="font-size: 24px; text-decoration: none; color: #FAFAFA;">CREATE YOUR <span class="text-gradient" style="color: #E8B4B8;">GLOW</span></a>
+        </div>
+
+        <div class="glass-card-3d hover-lift" style="padding: 30px; background: rgba(26, 26, 26, 0.8); border: 1px solid #E8B4B8; border-radius: 12px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <span class="section-tag" style="color: #D4A373; font-size: 12px; font-weight: 600; letter-spacing: 1px;">ACCESO AL AULA VIRTUAL</span>
+                <h2 style="color: #FAFAFA; font-family: 'Playfair Display', serif; margin-top: 5px;">Bienvenida de nuevo</h2>
+            </div>
+
+            <!-- Formulario de Login -->
+            <form id="loginForm">
+                <div class="input-group" style="margin-bottom: 15px;">
+                    <label for="loginEmail" style="display: block; color: #FAFAFA; margin-bottom: 5px; font-size: 14px;">Correo Electrónico</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="tu@correo.com" required style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #6C5CE7; background: #FAFAFA; color: #1A1A1A;">
+                </div>
+
+                <div class="input-group" style="margin-bottom: 20px;">
+                    <label for="loginPassword" style="display: block; color: #FAFAFA; margin-bottom: 5px; font-size: 14px;">Contraseña</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="********" required style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #6C5CE7; background: #FAFAFA; color: #1A1A1A;">
+                </div>
+
+                <button type="submit" class="btn-3d btn-3d-primary btn-full" style="width: 100%; padding: 12px; background: #6C5CE7; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; margin-bottom: 10px;">Ingresar a Mis Cursos</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <p style="color: #FAFAFA; font-size: 14px;">¿No tienes cuenta todavía? <a href="index.html#contacto" style="color: #E8B4B8; text-decoration: none; font-weight: 600;">Regístrate aquí</a></p>
+                <p style="margin-top: 10px;"><a href="index.html" style="color: #D4A373; text-decoration: none; font-size: 13px;"><i class="fa-solid fa-arrow-left"></i> Volver al inicio</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de autenticación básico (preparado para Firebase) -->
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>
