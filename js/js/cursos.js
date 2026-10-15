@@ -1,88 +1,65 @@
-// Información detallada de los Cursos de CREATE YOUR GLOW
-const cursosData = {
-    "1": {
-        title: "Marca Personal para Artistas",
-        price: "$50.000 COP",
-        tag: "ESTRATEGIA & POSICIONAMIENTO",
-        description: "Aprenderás a construir un perfil profesional que transmita confianza y exclusividad. Descubrirás cómo definir tu paleta visual, la voz de tu marca y cómo comunicarte con clientes para que valoren tu trabajo sin pedir descuentos.",
-        includes: [
-            "Definición de propuesta de valor única",
-            "Optimización de perfil e biografía de Instagram",
-            "Plantilla para cotizaciones profesionales",
-            "Acceso de por vida a las lecciones"
-        ]
-    },
-    "2": {
-        title: "Contenido que Vende",
-        price: "$70.000 COP",
-        tag: "CREACIÓN DE CONTENIDO",
-        description: "Domina la creación de videos e imágenes de impacto. Aprenderás iluminación básica con celular, ángulos para resaltar el maquillaje, hooks para captar atención en los primeros 3 segundos y llamados a la acción para convertir vistas en citas.",
-        includes: [
-            "Guía de iluminación económica para maquillaje",
-            "10 Estructuras de guiones para Reels virales",
-            "Técnicas de edición rápida desde CapCut",
-            "Estrategia de Reels vs. Historias"
-        ]
-    },
-    "3": {
-        title: "Marketing para Maquillistas",
-        price: "$60.000 COP",
-        tag: "VENTAS & FIDELIZACIÓN",
-        description: "El sistema probado para estructurar tus servicios de maquillaje social y novias. Aprenderás a automatizar respuestas, manejarobjeciones de precio y crear alianzas con fotógrafos y planificadores de eventos.",
-        includes: [
-            "Estrategia de respuestas efectivas por WhatsApp",
-            "Cómo armar paquetes irresistibles para Novias",
-            "Plantilla de contrato para servicios de maquillaje",
-            "Métodos de fidelización para clientes recurrentes"
-        ]
-    }
+// Importar Firebase SDK desde los CDNs oficiales
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getFirestore, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+// Configuración pública de Firebase (segura para el cliente/frontend)
+const firebaseConfig = {
+    apiKey: "TU_API_KEY_PUBLICA",
+    authDomain: "tu-proyecto.firebaseapp.com",
+    projectId: "tu-proyecto",
+    storageBucket: "tu-proyecto.appspot.com",
+    messagingSenderId: "tu-id",
+    appId: "tu-id-app"
 };
 
-// Captura de elementos del DOM
-const modal = document.getElementById("courseModal");
-const closeModalBtn = document.getElementById("closeModal");
-const openModalBtns = document.querySelectorAll(".btn-open-modal");
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-const modalTitle = document.getElementById("modalTitle");
-const modalPrice = document.getElementById("modalPrice");
-const modalTag = document.getElementById("modalTag");
-const modalDescription = document.getElementById("modalDescription");
-const modalIncludes = document.getElementById("modalIncludes");
+// Referencia al contenedor de cursos en el HTML
+const cursosGrid = document.getElementById("cursos-grid");
 
-// Función para abrir el modal con los datos del curso seleccionado
-openModalBtns.forEach(button => {
-    button.addEventListener("click", () => {
-        const courseId = button.getAttribute("data-course");
-        const course = cursosData[courseId];
+// Función para cargar los cursos desde Firestore
+async function cargarCursos() {
+    try {
+        cursosGrid.innerHTML = "<p>Cargando cursos disponibles...</p>";
 
-        if (course) {
-            modalTitle.textContent = course.title;
-            modalPrice.textContent = course.price;
-            modalTag.textContent = course.tag;
-            modalDescription.textContent = course.description;
+        // Creamos una consulta a la colección 'courses' filtrando solo los publicados
+        const q = query(collection(db, "courses"), where("published", "==", true));
+        const querySnapshot = await getDocs(q);
 
-            // Limpiar e insertar elementos de la lista
-            modalIncludes.innerHTML = "";
-            course.includes.forEach(item => {
-                const li = document.createElement("li");
-                li.textContent = item;
-                modalIncludes.appendChild(li);
-            });
+        cursosGrid.innerHTML = ""; // Limpiamos el mensaje de carga
 
-            // Mostrar Modal
-            modal.classList.add("active");
+        if (querySnapshot.empty) {
+            cursosGrid.innerHTML = "<p>No hay cursos disponibles en este momento.</p>";
+            return;
         }
-    });
-});
 
-// Cerrar Modal
-closeModalBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-});
+        // Recorremos cada documento obtenido de Firestore
+        querySnapshot.forEach((doc) => {
+            const curso = doc.data();
 
-// Cerrar haciendo clic fuera del cuadro blanco
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("active");
+            // Creamos la tarjeta HTML para cada curso
+            const card = document.createElement("div");
+            card.classList.add("curso-card");
+            card.setAttribute("data-category", curso.category || "general");
+
+            card.innerHTML = `
+                <div class="curso-info">
+                    <h3>${curso.title}</h3>
+                    <p class="curso-price">$${curso.price} COP</p>
+                    <button class="btn-comprar" data-title="${curso.title}">Inscribirme</button>
+                </div>
+            `;
+
+            cursosGrid.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error("Error al cargar los cursos desde Firestore: ", error);
+        cursosGrid.innerHTML = "<p>Hubo un error al cargar el catálogo. Intenta recargar la página.</p>";
     }
-});
+}
+
+// Ejecutar la función cuando cargue la página
+document.addEventListener("DOMContentLoaded", cargarCursos);
